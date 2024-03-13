@@ -27,19 +27,25 @@ playDomElement.addEventListener('click', function(){
     //      containerDomElement.classList.remove('dif-' + cellElement);
     //      containerDomElement.innerHTML = "";
     //  });
+    createGrid(gridElement,gridDomElement);
 
-    for(let i = 0; i < gridElement; i++){
+})
+function createGrid(totalCellsNumber,cellsContainerDomElement){
+    for(let i = 0; i < totalCellsNumber; i++){
         let numCell = i + 1;
-         //console.log(i)
-         let cellDomElement = document.createElement('div');
-         cellDomElement.classList.add('cell');
-         cellDomElement.innerHTML =`${numCell}`;
-         gridDomElement.append(cellDomElement);
-         cellDomElement.addEventListener('click', function(){
-             cellDomElement.classList.toggle('bg-azure');
-             console.log('click sulla casella :', numCell);
-         })
-        } 
+        //console.log(i)
+        let cellDomElement = document.createElement('div');
+        cellDomElement.classList.add('cell');
+        cellDomElement.innerHTML =`${numCell}`;
+        cellsContainerDomElement.append(cellDomElement);
+        cellDomElement.addEventListener('click', function(){
+            cellDomElement.classList.toggle('bg-azure');
+            console.log('click sulla casella :', numCell);
+        })
+    } 
+}
+
+
 /*
     if(dificultyDomElement == '1'){
         console.log('difficile');
@@ -73,11 +79,3 @@ playDomElement.addEventListener('click', function(){
     }
 */
     
-    
-
-
-
-    
-
-})
-
