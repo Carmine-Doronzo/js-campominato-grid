@@ -6,9 +6,7 @@ const containerDomElement = document.querySelector('.container');
 
 const resetDomElement = document.getElementById('reset');
 
-resetDomElement.addEventListener('click',function(){
-    containerDomElement.innerHTML = "";
-})
+
 
 playDomElement.addEventListener('click', function(){
 
@@ -22,18 +20,30 @@ playDomElement.addEventListener('click', function(){
         containerDomElement.classList.add('dif1');
         cellElement = 10;
         gridElement = cellElement ** 2;
+        resetDomElement.addEventListener('click',function(){
+            containerDomElement.innerHTML = "";
+            containerDomElement.classList.remove('dif1');
+        })
         //console.log(gridElement)
     }else if(dificultyDomElement == '2'){
         console.log('medio');
         containerDomElement.classList.add('dif2');
         cellElement = 9;
         gridElement = cellElement ** 2;
+        resetDomElement.addEventListener('click',function(){
+            containerDomElement.innerHTML = "";
+            containerDomElement.classList.remove('dif2');
+        })
        // console.log(gridElement)
     }else{
         console.log('facile');
         containerDomElement.classList.add('dif3');
         cellElement = 7;
         gridElement = cellElement ** 2;
+        resetDomElement.addEventListener('click',function(){
+            containerDomElement.innerHTML = "";
+            containerDomElement.classList.remove('dif3');
+        })
         //console.log(gridElement)
     }
 
