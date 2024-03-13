@@ -2,6 +2,7 @@ console.log('Campo minato')
 
 const playDomElement = document.getElementById('play');
 
+const containerDomElement = document.querySelector('.container');
 
 playDomElement.addEventListener('click', function(){
 
@@ -29,8 +30,17 @@ playDomElement.addEventListener('click', function(){
 
     
 
-    for(let i = 0; i<gridElement; i++){
-        console.log(i)
+    for(let i = 0; i < gridElement; i++){
+       let numCell = i + 1;
+        //console.log(i)
+        let cellDomElement = document.createElement('div')
+        cellDomElement.classList.add('cell')
+        cellDomElement.innerHTML =`${numCell}`
+        containerDomElement.append(cellDomElement);
+        cellDomElement.addEventListener('click', function(){
+            cellDomElement.classList.add('bg-azure')
+            console.log('click sulla casella :', numCell)
+        })
     }
 
 })
