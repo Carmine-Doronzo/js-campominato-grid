@@ -7,7 +7,7 @@
 .container{
     width: 800px;
     margin: 100px auto;
-    background-color: aquamarine;
+    background-color: blue;
     display: flex;
     flex-wrap: wrap;
 }
@@ -16,4 +16,8 @@
     padding: 20px;
     aspect-ratio: 1/1;
     border: 2px solid black;
+}
+
+.bg-azure{
+    background-color: rgb(169, 231, 231);
 }
