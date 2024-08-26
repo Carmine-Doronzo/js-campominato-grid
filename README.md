@@ -1,0 +1,1 @@
+Questo è l'esercizio di base che verrà completato in js-campominato-dom in cui preparo il layout del campo di gioco e gestisco la grandezza del suddetto tramite le difficoltà che sono: difficoltà 1 = difficile, difficoltà 2 = medio, difficoltà 3 = facile
